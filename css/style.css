@@ -1,0 +1,299 @@
+:root {
+  --primary-color: red;
+  --secondary-color: black;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Avantgarde", "TeX Gyre Adventor", "URW Gothic L", "sans-serif";
+  height: 100vh;
+  background: url("../img/treasure\ room.jpg") no-repeat center center/cover;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utility */
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.container {
+  padding: 1rem 0;
+  max-width: 1200px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.outline {
+  border: red 1px solid;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  padding: 1rem;
+  color: #fff;
+  display: grid;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.loot-item {
+  max-width: 18rem;
+  min-width: 12rem;
+}
+
+.platinum-coin {
+  color: #e5e4e1;
+}
+
+.gold-coin {
+  color: gold;
+}
+
+.electrum-coin {
+  color: #b99033;
+}
+
+.silver-coin {
+  color: silver;
+}
+
+.copper-coin {
+  color: #b87333;
+}
+
+.quickflexrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* NavBar */
+#navbar {
+  border-bottom: red solid 1px;
+  background-color: black;
+}
+
+#navbar .fa-gripfire {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
+#navbar .nav-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+#navbar .nav-content ul {
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar .nav-content .logo {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+#navbar .nav-content ul li a {
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+
+#navbar .nav-content ul li a:hover {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* ShowCase */
+#showcase {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  position: relative;
+}
+
+#showcase::before {
+  /* background: url("../img/treasure\ room.jpg") no-repeat center center/cover; */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+
+#showcase .container {
+  margin: auto;
+}
+
+#showcase .currency-content {
+  text-align: center;
+  margin: auto;
+  display: grid;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#showcase .currency-content > h1 {
+  padding-bottom: 0.5rem;
+}
+
+#showcase .currency-content h3 {
+  margin: 0.4rem;
+}
+
+#showcase .currency-adjust {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#showcase .currency-adjust .btn {
+  width: 2.1rem;
+  height: 2.1rem;
+  margin: 0.7rem;
+}
+#showcase .currency-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#showcase .currency-content input[type="number"] {
+  width: 50px;
+  margin: 0.3rem 0;
+}
+
+/* LootBag */
+#showcase .btn-change-display {
+  padding: 0.4rem;
+  margin-left: 1rem;
+  background: var(--secondary-color);
+  color: white;
+}
+
+#showcase .btn-change-display:hover {
+  padding: 0.4rem;
+  margin-left: 1rem;
+  background: var(--primary-color);
+  color: white;
+}
+
+#showcase .loot-content,
+#showcase .special-content {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#showcase .loot-content > article > :first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#showcase .loot-content > article .item-name {
+  padding-right: 1rem;
+}
+
+/* Mister-Magic special Loot */
+
+#showcase .special-content .special-item {
+  max-width: 25rem;
+}
+
+#showcase .special-content .special-item .damage-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#showcase .special-content .special-item img {
+  height: 120px;
+  padding: 0 1rem;
+}
+
+#showcase #staff_img {
+  height: 200px;
+}
+
+/* Members */
+
+#team {
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+#team .section-header {
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+#team .members {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#team .members .member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  border-left: var(--primary-color) solid 5px;
+  border-bottom: var(--primary-color) solid 1px;
+  margin: 0rem 2rem 3rem 2rem;
+  background: white;
+  color: var(--secondary-color);
+  max-width: 600px;
+}
+#team .members .member .about-member {
+  margin: 0 1rem;
+}
+#team .members .member img {
+  height: 200px;
+  width: 170px;
+}
